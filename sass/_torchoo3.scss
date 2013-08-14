@@ -1,0 +1,34 @@
+@import "base";
+.content{
+	max-width: 1000px;
+	margin: 40px auto 0;
+	form{
+		@include clr;
+	}
+}
+// --------profile styles
+.profile{
+	width: 40%;
+	float: left;
+}
+.profile__name{
+	label{
+		@include clr;
+	}
+	p{
+		float: left;
+	}
+	input{
+		float: right;
+		width: 246px;
+		border: 1px solid #ccc;
+	}
+}
+.social{
+	width: 28%;
+	float: left;
+}
+.currencies{
+	width: 32%;
+	float: left;
+}
