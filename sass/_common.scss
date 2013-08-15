@@ -47,7 +47,9 @@ table {
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
     line-height: 1.4;
 }
 a{
@@ -56,33 +58,66 @@ a{
         text-decoration:none;
     }
 }
-.l-layout {
-    margin: 0 auto -120px;
-    position: relative;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
+.pseudo-link{
+    cursor: pointer;
+    border-bottom: 1px dashed;
+    line-height: 1;
 }
-.push {
-    clear: both;
-    height: 120px;
-}
-h1{
+.h1{
+    margin-bottom: 24px;
     font-weight: 600;
     font-size: 24px;
     color: #444;
 }
+.divide{
+    height: 1px;
+    background: #ededed;
+    margin: 26px 0;
+}
 /* ------------------------------------ //END Main styles --------------------------------------- */
- 
+.l-header{
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+    background: #F0F1F3;
+    @include background-image(radial-gradient(center bottom, #ffffff 0%, #F0F1F3 100%));
+}
+.header{
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 116px;
+    padding-top: 18px;
+}
+.logo{
+    a{
+        display: block;
+        @include hide-text;
+        i{
+            display: block;
+            @include s(logo);
+        }
+    }
+}
+.l-header:before,
+.l-header:after {
+    content:"";
+    position:absolute;
+    z-index:-2;
+}
+.l-header:before {
+    top:50%;
+    bottom:0px;
+    left:10px;
+    right:10px;
+    @include box-shadow(0 -89px 47px 85px rgba(0, 0, 0, 0.4));
+    -moz-border-radius:50% / 10px;
+    border-radius:50% / 10px;
+}
 /* ----------------------------------------- Header --------------------------------------------- */
+
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
-.footer {
-    position: relative;
-    height: 120px;
-}
 /* -------------------------------------- //END Footer ------------------------------------------- */

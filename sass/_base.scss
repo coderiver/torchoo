@@ -30,6 +30,9 @@ $break-large: 1180px;
     @content;
   }
 }
+@mixin r($media){
+  @include respond-to($media);
+}
 
 // BACKGROUND SIZE
 @mixin background-size($width: 100%, $height: 100%) {
@@ -133,20 +136,27 @@ $break-large: 1180px;
   -webkit-filter: grayscale(0%);
 }
 
+//  sprites with padding
+$icons: sprite-map("icons/*.png", $spacing: 10px);
+
 // sized sprites
 @mixin image-size($path){
   width: image-width($path);
   height: image-height($path);
 }
-//for retina
-@mixin image-sizer($path){
-  width: image-width($path)/2;
-  height: image-height($path)/2;
-}
-
-@mixin s($map, $sprite){
+@mixin sized-sprite($map, $sprite){
   background: sprite($map, $sprite) no-repeat;
   @include image-size(sprite-file($map, $sprite));
+}
+//shortcut
+@mixin s($sprite, $map: $icons){
+  background: sprite($map, $sprite) no-repeat;
+  //background-image: inline-image('icons/'+$sprite+'.png','image/png'); to switches sprites to base64, elegant
+  @include image-size(sprite-file($map, $sprite));
+}
+//only image, when dimensions are useless
+@mixin si($sprite, $map: $icons){
+  background: sprite($map, $sprite) no-repeat;
 }
 //for retina
 @mixin sized-spriter($map, $sprite){
