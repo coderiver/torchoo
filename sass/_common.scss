@@ -84,10 +84,11 @@ a{
 .header{
     max-width: 1000px;
     margin: 0 auto;
-    height: 116px;
+    height: 98px;
     padding-top: 18px;
 }
 .logo{
+    float: left;
     a{
         display: block;
         @include hide-text;
@@ -111,6 +112,68 @@ a{
     @include box-shadow(0 -89px 47px 85px rgba(0, 0, 0, 0.4));
     -moz-border-radius:50% / 10px;
     border-radius:50% / 10px;
+}
+.menu{
+    float: left;
+    margin: 36px 0 0 67px;
+    li{
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        padding-left: 48px;
+        @include box-sizing(border-box);
+        a{
+            padding: 1px 4px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #444;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+}
+.transactions.is-active, .balances.is-active, .username.is-active{
+    a{
+        background: #ffd65d;
+    }
+}
+.transactions:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -11px;
+    @include s(transactions);
+}
+.balances:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+    @include s(balances);
+}
+.username:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+    @include s(profile);
+}
+.username.is-active:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+    @include s(profile-active);
+}
+.logout{
+    float: right;
+    text-decoration: underline;
+    margin-top: 35px;
 }
 /* ----------------------------------------- Header --------------------------------------------- */
 
