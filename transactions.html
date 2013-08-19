@@ -23,6 +23,7 @@
                     torchoo.com
                 </a>
             </h1>
+            <a class="logout" href="#">Log Out</a>
             <nav class="menu">
                 <ul>
                     <li class="transactions-link is-active"><a href="#">Transactions</a></li>
@@ -30,7 +31,6 @@
                     <li class="username-link"><a href="#">Genn づ•‿•)づ</a></li>
                 </ul>
             </nav>
-            <a class="logout" href="#">Log Out</a>
         </div>
     </header>
 <!-- ============================== BEGIN content ========================= -->
@@ -186,13 +186,15 @@
                 <form>
                     <div class="box money">
                         <input class="money__amount" type="text">
-                        <ul class="money__currency">
-                            <li class="is-selected">UAH</li>
-                            <li>RUR</li>
-                            <li>USD</li>
-                            <li>EUR</li>
-                        </ul>
-                        <div class="money__more"><i></i></div>
+                        <div class="money__settings">
+                            <ul class="money__currency">
+                                <li class="is-selected">UAH</li>
+                                <li>RUR</li>
+                                <li>USD</li>
+                                <li>EUR</li>
+                            </ul>
+                            <div class="money__more"><i></i></div>
+                        </div>
                     </div>
                     <div class="add-record__title">
                         <p class="left">Email of your friends</p>

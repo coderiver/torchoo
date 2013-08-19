@@ -78,6 +78,7 @@ a{
     margin: 26px 0;
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
+/* ----------------------------------------- Header --------------------------------------------- */
 .l-header{
     position: relative;
     border-bottom: 1px solid #f1f1f1;
@@ -100,6 +101,12 @@ a{
             @include s(logo);
         }
     }
+    @include respond-to(768){
+        margin: 20px 0 0 10px;
+        a i{
+            @include s(logo-min);
+        }
+    }
 }
 .l-header:before,
 .l-header:after {
@@ -117,21 +124,24 @@ a{
     border-radius:50% / 10px;
 }
 .menu{
-    float: left;
-    margin: 36px 0 0 67px;
+    overflow: hidden;
+    height: 100%;
+    padding: 36px 0 0 10%;
     li{
-        position: relative;
-        display: inline-block;
-        width: 200px;
-        padding-left: 48px;
+        float: left;
+        width: 33%;
         @include box-sizing(border-box);
         a{
+            position: relative;
             padding: 1px 4px;
             font-size: 14px;
             font-weight: 400;
             color: #444;
             &:hover{
                 color: #000;
+            }
+            @include respond-to(600){
+                @include hide-text;
             }
         }
     }
@@ -141,54 +151,71 @@ a{
         background: #ffd65d;
     }
 }
-.transactions-link:before{
+.transactions-link a:before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
-    margin-top: -11px;
+    left: -40px;
+    margin-top: -13px;
     @include s(transactions);
+    @include respond-to(600){
+        left: 50%;
+    }
 }
-.transactions-link.is-active:before{
+.transactions-link.is-active a:before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
-    margin-top: -11px;
+    left: -40px;
+    margin-top: -13px;
     @include s(transactions-active);
+    @include respond-to(600){
+        left: 50%;
+    }
 }
-.balances-link:before{
+.balances-link a:before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -40px;
     margin-top: -15px;
     @include s(balances);
+    @include respond-to(600){
+        left: 50%;
+    }
 }
-.username-link:before{
+.username-link a:before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -40px;
     margin-top: -10px;
     @include s(profile);
+    @include respond-to(600){
+        left: 50%;
+    }
 }
-.username-link.is-active:before{
+.username-link.is-active a:before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -40px;
     margin-top: -10px;
     @include s(profile-active);
+    @include respond-to(600){
+        left: 50%;
+    }
 }
 .logout{
     float: right;
     text-decoration: underline;
-    margin-top: 35px;
+    margin: 35px 10px 0 0;
     font-size: 12px;
     color: #444;
+    @include respond-to(600){
+        display: none;
+    }
 }
-/* ----------------------------------------- Header --------------------------------------------- */
 
 /* -------------------------------------- //END Header ------------------------------------------ */
 
