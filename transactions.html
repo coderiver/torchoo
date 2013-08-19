@@ -1,0 +1,277 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transactions</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/common.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <header class="l-header">
+        <div class="header">
+            <h1 class="logo">
+                <a href="#">
+                    <i></i>
+                    torchoo.com
+                </a>
+            </h1>
+            <nav class="menu">
+                <ul>
+                    <li class="transactions-link is-active"><a href="#">Transactions</a></li>
+                    <li class="balances-link"><a href="#">Balances</a></li>
+                    <li class="username-link"><a href="#">Genn づ•‿•)づ</a></li>
+                </ul>
+            </nav>
+            <a class="logout" href="#">Log Out</a>
+        </div>
+    </header>
+<!-- ============================== BEGIN content ========================= -->
+    <section class="content">
+        <div class="wrapper-transactions">
+            <div class="transactions">
+                <form>
+                    <input class="input-round" type="text">
+                </form>
+                <div class="transactions__alert">
+                    You have <strong>2 new</strong> transactions to review
+                </div>
+                <ul>
+                    <li class="transaction new">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/68/68" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="minus">-12</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
+                            </p>
+                            <p>Special VIP parking payment</p>
+                        </div>
+                    </li>
+                    <li class="transaction new">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/68/68" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="plus">+120</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
+                            </p>
+                            <p>Special VIP parking payment</p>
+                        </div>
+                    </li>
+                    <li class="transaction declined">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/100/100" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                            <strong>Declined</strong>
+                            <span>Undo</span>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="minus">-120</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
+                            </p>
+                            <p>Special VIP parking payment</p>
+                        </div>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/100/100" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="plus">+120</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
+                            </p>
+                            <p>Just a gift of adore and admiration</p>
+                        </div>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/100/100" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="plus">+120</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
+                            </p>
+                            <p>Special VIP parking payment</p>
+                        </div>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/100/100" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="plus">+120</span> <span class="transaction__currency">UAH</span> to <a href="#">Akella</a>
+                            </p>
+                            <p>Just a gift of adore and admiration</p>
+                        </div>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction__avatar">
+                            <img src="http://lorempixel.com/100/100" alt="">
+                        </div>
+                        <div class="transaction__action">
+                            <span class="acept">Confirm</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                        <div class="transaction__date">
+                            <p>May 15 2013</p>
+                            <p>13:52</p>
+                        </div>
+                        <div class="transaction__info">
+                            <p>
+                                <span class="minus">-90</span> <span class="transaction__currency">USD</span> to <a href="#">Istushkin</a>
+                            </p>
+                            <p>Special VIP parking payment</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="add-record">
+                <h1 class="h1 h1_mod">Add a record</h1>
+                <form>
+                    <div class="box money">
+                        <input class="money__amount" type="text">
+                        <ul class="money__currency">
+                            <li class="is-selected">UAH</li>
+                            <li>RUR</li>
+                            <li>USD</li>
+                            <li>EUR</li>
+                        </ul>
+                        <div class="money__more"><i></i></div>
+                    </div>
+                    <div class="add-record__title">
+                        <p class="left">Email of your friends</p>
+                        <div class="right">
+                            <label>
+                                <span class="checkbox">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </span>
+                                Even
+                            </label>
+                        </div>
+                    </div>
+                    <ul class="friends">
+                        <li>
+                            <input type="text" class="box">
+                            <div class="friends__value">10.20</div>
+                        </li>
+                        <li>
+                            <input type="text" class="box">
+                            <div class="friends__value">10.20</div>
+                        </li>
+                        <li>
+                            <input type="text" class="box">
+                            <div class="friends__value">10.20</div>
+                        </li>
+                        <li>
+                            <input type="text" class="box">
+                            <div class="friends__value">10.20</div>
+                        </li>
+                        <li>
+                            <input type="text" class="box">
+                            <div class="friends__value">10.20</div>
+                        </li>
+                    </ul>
+                    <span class="add-email__add pseudo-link">Add secondary email</span>
+                    <div class="add-record__title">
+                        <p class="left">Money owed for</p>
+                    </div>
+                    <input type="text" class="box">
+                    <div class="add-record__title">
+                        <p class="left">Location (optional)</p>
+                    </div>
+                    <div class="mapping">
+                        <input type="text" class="box" placeholder="Tap to locate">
+                        <span class="mapping__button"><i></i></span>
+                    </div>
+                    <div class="add-record__buttons">
+                        <button class="button give">I give money</button>
+                        <button class="button button_red owe">I owe money</button>
+                    </div>
+                </form>
+                <div class="balance-preview">
+                    <h1 class="h1">Balance</h1>
+                    <a href="#" class="balance-preview__more">See detailed balances</a>
+                    <div class="l-numbers">
+                        <div class="numbers">
+                            <p>You gave</p>
+                            <p class="numbers__sum"><span>+1200</span>USD</p>
+                        </div>
+                        <div class="numbers">
+                            <p>You owe</p>
+                            <p class="numbers__sum numbers__sum_red"><span>-200</span>USD</p>
+                        </div>
+                    </div>
+                    <div class="balance-preview__progress">
+                        <div class="balance-preview__plus" style="width:70%;"></div>
+                        <div class="balance-preview__minus" style="width:30%;"></div>
+                    </div>
+                    <div class="l-numbers">
+                        <div class="numbers">
+                            <p>Total</p>
+                            <p class="numbers__sum"><span>+1200</span>USD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ======================== END content ================================ -->
+</body>
+</html>
