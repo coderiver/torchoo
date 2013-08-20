@@ -13,6 +13,17 @@
 	float: left;
 	padding-right: 4%;
 	@include box-sizing(border-box);
+	@include respond-to(850){
+		width: 60%;
+		padding: 0 10px;
+	}
+	@include respond-to(600){
+		width: 100%;
+		float: none;
+		.h1{
+			text-align: center;
+		}
+	}
 }
 .input{
 	margin-top: 14px;
@@ -81,6 +92,19 @@
 .social{
 	width: 28%;
 	float: left;
+	@include box-sizing(border-box);
+	@include respond-to(850){
+		width: 40%;
+		padding: 0 10px;
+	}
+	@include respond-to(600){
+		width: 100%;
+		float: none;
+		padding-top: 20px;
+		.h1{
+			text-align: center;
+		}
+	}
 }
 .social__accounts{
 	li{
@@ -147,6 +171,21 @@
 .currencies{
 	width: 32%;
 	float: left;
+	@include box-sizing(border-box);
+	@include respond-to(850){
+		float: none;
+		clear: both;
+		width: 50%;
+		margin: 0 auto;
+		padding: 20px 10px 0;
+		.h1{
+			text-align: center;
+		}
+	}
+	@include respond-to(600){
+		width: 100%;
+		margin: 0;
+	}
 }
 .currencies__help{
 	margin: -14px 0 14px;
@@ -164,7 +203,7 @@
 }
 .currencies__item{
 	float: left;
-	width: 25%;
+	width: 80px;
 	@include box-sizing(border-box);
 	margin-bottom: 20px;
 	padding-right: 10px;
@@ -205,6 +244,7 @@
 }
 .save{
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 // =================== styles for transactions page ============================
