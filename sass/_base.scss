@@ -14,11 +14,16 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 $icons-svg: "icons-svg/";
 
 // responsive
+$break-480: 480px;
 $break-600: 600px;
 $break-700: 700px;
 $break-768: 768px;
 $break-850: 850px;
+$break-large: 1920px;
 @mixin respond-to($media) {
+  @if $media == 480 {
+    @media only screen and (max-width: $break-480) { @content; }
+  }
   @if $media == 600 {
     @media only screen and (max-width: $break-600) { @content; }
   }
@@ -28,8 +33,11 @@ $break-850: 850px;
   @if $media == 768 {
     @media only screen and (max-width: $break-768) { @content; }
   }
-  @else if $media == 850 {
+  @if $media == 850 {
     @media only screen and (max-width: $break-850) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $break-large) { @content; }
   }
 }
 // retina bg

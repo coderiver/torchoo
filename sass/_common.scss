@@ -70,7 +70,11 @@ a{
     color: #444;
 }
 .h1_mod{
+    position: relative;
     margin-bottom: 13px;
+    @include respond-to(480){
+        cursor: pointer;
+    }
 }
 .divide{
     height: 1px;
@@ -90,6 +94,9 @@ a{
     margin: 0 auto;
     height: 98px;
     padding-top: 18px;
+    @include respond-to(600){
+        height: 62px;
+    }
 }
 .logo{
     float: left;
@@ -106,6 +113,9 @@ a{
         a i{
             @include s(logo-min);
         }
+    }
+    @include respond-to(600){
+        margin: 0 0 0 10px;
     }
 }
 .l-header:before,
@@ -145,10 +155,16 @@ a{
             }
         }
     }
+    @include respond-to(600){
+        padding: 14px 0 0 10%;
+    }
 }
 .transactions-link.is-active, .balances-link.is-active, .username-link.is-active{
     a{
         background: #ffd65d;
+        @include respond-to(600){
+            background: transparent;
+        }
     }
 }
 .transactions-link a:before{

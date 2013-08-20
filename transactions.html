@@ -61,6 +61,11 @@
                                 <span class="minus">-12</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
                             </p>
                             <p>Special VIP parking payment</p>
+                            <p class="date">May 15 1013, 13:52</p>
+                            <div class="action">
+                                <span class="acept">Confirm</span>
+                                <span class="decline">Decline</span>
+                            </div>
                         </div>
                     </li>
                     <li class="transaction new">
@@ -77,9 +82,14 @@
                         </div>
                         <div class="transaction__info">
                             <p>
-                                <span class="plus">+120</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
+                                <span class="minus">-12</span> <span class="transaction__currency">UAH</span> to <a href="#">Julia Shevchenko</a>
                             </p>
                             <p>Special VIP parking payment</p>
+                            <p class="date">May 15 1013, 13:52</p>
+                            <div class="action">
+                                <span class="acept">Confirm</span>
+                                <span class="decline">Decline</span>
+                            </div>
                         </div>
                     </li>
                     <li class="transaction declined">
@@ -182,7 +192,7 @@
                 </ul>
             </div>
             <div class="add-record">
-                <h1 class="h1 h1_mod">Add a record</h1>
+                <h1 class="h1 h1_mod ">Add a record</h1>
                 <form>
                     <div class="box money">
                         <input class="money__amount" type="text">
@@ -272,8 +282,57 @@
                     </div>
                 </div>
             </div>
+            <div class="add-record-btn">
+                <h1 class="h1">+ Add record</h1>
+            </div>
         </div>
     </section>
 <!-- ======================== END content ================================ -->
+<!-- BEGIN add record popup -->
+<div class="wrapper-popup">
+    <div class="popup">
+        <h1 class="h1 h1_mod ">Add a record</h1>
+                <form>
+                    <div class="box money">
+                        <input class="money__amount" type="text">
+                        <div class="money__settings">
+                            <ul class="money__currency">
+                                <li class="is-selected">UAH</li>
+                                <li>RUR</li>
+                                <li>USD</li>
+                                <li>EUR</li>
+                            </ul>
+                            <div class="money__more"><i></i></div>
+                        </div>
+                    </div>
+                    <div class="add-record__title">
+                        <p class="left">Email of your friends</p>
+                    </div>
+                    <ul class="friends">
+                        <li>
+                            <input type="text" class="box">
+                            <div class="friends__value">10.20</div>
+                        </li>
+                    </ul>
+                    <span class="add-email__add pseudo-link">Add secondary email</span>
+                    <div class="add-record__title">
+                        <p class="left">Money owed for</p>
+                    </div>
+                    <input type="text" class="box">
+                    <div class="add-record__title">
+                        <p class="left">Location (optional)</p>
+                    </div>
+                    <div class="mapping">
+                        <input type="text" class="box" placeholder="Tap to locate">
+                        <span class="mapping__button"><i></i></span>
+                    </div>
+                    <div class="add-record__buttons">
+                        <button class="button give">I give money</button>
+                        <button class="button button_red owe">I owe money</button>
+                    </div>
+                </form>
+    </div>
+</div>
+<!-- END add record popup -->
 </body>
 </html>

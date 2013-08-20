@@ -15,4 +15,13 @@ $(document).ready(function() {
             .html( "Dropped!" );
       }
     });
+
+    $(".add-record-btn").click(function(){
+
+      $(this).hide();
+      $(".wrapper-popup").show();
+
+    })
+
+
 });

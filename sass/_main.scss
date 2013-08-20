@@ -210,9 +210,11 @@
 // =================== styles for transactions page ============================
 
 .wrapper-transactions{
+	position: relative;
 	@include clr;
 }
 .transactions{
+	position: relative;
 	width: 59%;
 	float: left;
 	padding: 21px 0 0 0;
@@ -247,6 +249,9 @@
 	font-size: 18px;
 	font-weight: 600;
 	@include background-image(linear-gradient(top, #fff 0%, #fff 30%, #fff3ce 100%));
+	@include respond-to(480){
+		font-size: 14px;
+	}
 }
 .transaction{
 	padding: 13px 10px;
@@ -283,6 +288,9 @@
 	@include background-image(linear-gradient(top, #fff3ce 0%, #fff3ce 55%, #ffeaac 100%));
 	.transaction__action{
 		display: block;
+		@include respond-to(600){
+			display: none;
+		}
 	}
 	.transaction__date{
 		padding-right: 35px;
@@ -311,12 +319,7 @@
 	text-align: right;
 	color: #999;
 	@include respond-to(850){
-		float: none;
-		height: auto;
-		text-align: left;
-		p{
-			display: inline-block;
-		}
+		display: none;
 	}
 }
 .transaction__info{
@@ -336,6 +339,28 @@
 	.transaction__currency{
 		text-transform: uppercase;
 		color: #999;
+	}
+	.date{
+		display: none;
+		color: #999;
+		font-size: 12px;
+		@include respond-to(850){
+			display: block;
+		}
+	}
+	.action{
+		display: none;
+		overflow: hidden;
+		.acept{
+			float: left;
+		}
+		.decline{
+			float: right;
+		}
+		@include respond-to(600){
+			display: block;
+			margin-top: 10px;
+		}
 	}
 }
 .plus{
@@ -383,9 +408,15 @@
 	width: 320px;
 	padding-top: 39px;
 	margin: 0 10px;
+	.h1 span{
+		display: none;
+	}
 	@include respond-to(700){
 		width: auto;
 		float: none;
+	}
+	@include respond-to(480){
+		display: none;
 	}
 }
 .box{
@@ -597,6 +628,9 @@
 .balance-preview{
 	position: relative;
 	padding-top: 70px;
+	@include respond-to(700){
+		display: none;
+	}
 }
 .balance-preview__more{
 	position: absolute;
@@ -658,4 +692,35 @@
 	@include box-sizing(border-box);
 	border: 1px solid #7f0508;
 	@include background-image(linear-gradient(top, #c0212b 0%, #7f0508 100%));
+}
+.add-record-btn{
+	display: none;
+	height: 52px;
+	margin: 22px 0 -15px;
+	background: #ebebeb;
+	padding: 17px 11px 0;
+	border-top: 1px solid #ddd;
+	@include box-shadow(0 2px 18px 7px #ccc);
+	cursor: pointer;
+	@include respond-to(480){
+		display: block;
+	}
+}
+.wrapper-popup{
+	display: none;
+	position: fixed;
+	top: 81px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255,.5);
+}
+.popup{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	padding: 15px 10px 5px;
+	@include box-shadow(0 2px 18px 7px #ccc);
 }
