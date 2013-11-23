@@ -1,0 +1,62 @@
+.transaction
+	padding: 10px 
+	@extend %clr
+	border-bottom: 1px solid #EDEDED 
+	position: relative
+	&.is-waiting
+		background: url(../img/pattern2.png) repeat 0 0 
+	.transaction__avatar
+		float: left
+		margin-right: 20px
+		width: 68px 
+		height: 68px 
+	.transaction__descr
+
+	time
+		font-size: 12px 
+		color: #777777
+		display: block
+	.transaction__info
+		font-size: 24px 
+		color: #222 
+		+m
+		.transaction__amount, .transaction__to
+			display: inline-block
+		.transaction__amount
+			margin-right: 10px 
+	.transaction__message
+		font-size: 16px 
+		color: #222 
+	.transaction__action
+		position: absolute
+		right: 10px 
+		top: 10px 
+		padding-top: 25px 
+		width: 90px 
+		text-align: right
+		.button
+			text-align: left
+.reviewedtransactions
+	background: #FFF2D0
+	border-bottom: 1px solid #FECE4B 
+	.transaction
+		border-bottom: 1px solid #FECE4B 
+		.transaction__action
+			padding-top: 0 
+
+		.button_confirm
+			margin-bottom: 15px 
+.declined
+	+bold
+	font-size: 16px 
+	color: #222 
+	margin-bottom: 10px 
+	display: inline-block
+	margin-top: 10px 
+	i
+		display: inline-block
+		+s(del)
+		margin-right: 4px 
+		vertical-align: middle
+		position: relative
+		top: -2px 

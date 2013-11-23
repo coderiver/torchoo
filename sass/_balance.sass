@@ -1,0 +1,157 @@
+.message
+	background: #FFF2D0
+	border-bottom: 1px solid #FED567
+	padding: 0 10px
+	font-size: 16px   
+	color: #222 
+	height: 30px 
+	line-height: 30px
+	a
+		color: #222 
+.is-plus
+	color: #40B34F 
+.is-minus
+	color: #9e0b0f 
+	
+.balances
+	background: #FAFAFA url(../img/pattern.png) repeat-x 0 100% 
+	border-top: 1px solid #222 
+	.balances__total
+		border-top: 1px solid #000
+		padding: 10px 10px 15px 10px
+		@extend %clr
+		line-height: 1 
+		h3
+			float: left
+			+l
+			font-size: 42px 
+		.balances__totalvalue
+			float: right 
+			+l
+			font-size: 42px 
+			span
+				font-size: 36px 
+				margin-left: 4px 
+
+.balance
+	border-bottom: 1px solid #EDEDED 
+	
+	position: relative
+	cursor: pointer
+	
+	.balance__content
+		@extend %clr
+		padding: 10px
+		position: relative
+		z-index: 20 
+	&:hover
+		//background: #f4f4f4 
+	&.is-active
+		.balance__content
+			background: #3FB34F 
+			color: #fff
+			margin-bottom: 2px 
+			&:before
+				position: absolute
+				bottom: -5px 
+				left: 0
+				right: 0 
+				width: 100%  
+				height: 5px 
+				padding-left: 10px 
+				padding-right: 10px 
+				background: url(../img/pattern1.png) repeat-x 0 0
+				content: ' '
+				z-index: 100 
+		.balance__user, .balance__records,.balance__value
+			color: #fff 
+	.balance__avatar
+		float: left
+		margin-right: 18px 
+		width: 68px 
+		height: 68px 
+	.balance__user
+		font-size: 24px 
+		color: #000 
+		+m
+		font-weight: normal
+		margin-bottom: 15px 
+	.balance__records
+		font-size: 12px 
+		color: #777 
+		text-decoration: underline
+	strong
+		+bold
+	.balance__value
+		float: right
+		height: 68px   
+		line-height: 68px
+		font-size: 42px  
+		+l
+		span
+			font-size: 36px 
+			margin-left: 4px
+	.balance__geteven
+		position: absolute
+		bottom: 4px  
+		right: 10px 
+		padding: 0 5px
+		background: #fff
+		color: #3FB34F
+		text-transform: uppercase
+		+bold   
+.smalltransaction
+	border-top: 1px solid #EDEDED 
+	position: relative
+	cursor: default
+	@extend %clr
+	&.is-waiting
+		background: url(../img/pattern2.png) repeat 0 0 
+	time
+		font-size: 12px 
+		color: #777
+		float: left 
+		line-height: 1.2
+		padding: 8px 0 7px 10px  
+		width: 89px
+	.smalltransaction__message
+		float: left
+		height: 39px 
+		line-height: 39px
+		font-size: 16px  
+		color: #222
+		width: 400px  
+	.smalltransaction__value
+		height: 39px 
+		line-height: 39px
+		position: absolute
+		font-size: 18px  
+		+m
+		right: 48px 
+		top: 0 
+	.smalltransaction__action
+		position: absolute
+		right: 9px 
+		text-align: right
+		padding-top: 9px 
+	.smalltransaction__pay
+		font-size: 12px 
+		+bold
+		text-transform: uppercase
+		color: #fff
+		background: #3FB34F
+		width: 31px 
+		text-align: center
+		height: 19px 
+		cursor: pointer
+		line-height: 19px 
+	.smalltransaction__decline
+		position: relative
+		top: -2px 
+		vertical-align: middle
+		i
+			+s(del)
+			position: absolute
+			left: -19px 
+			top: 1px 
+			cursor: pointer

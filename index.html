@@ -1,0 +1,172 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+
+	<script src="js/jquery.js"></script>
+	<script>$(document).ready(function() {
+		$('.user').click(function(event) {
+			$(this).toggleClass('is-active');
+		});
+		$('.gnav a').click(function(event) {
+			$('.gnav a').removeClass('is-active');
+			$(this).addClass('is-active');
+		});
+	});</script>
+</head>
+<body>
+<div class="out">
+	<!-- begin header -->
+	<div class="header">
+		<a href='#' class="header__logo">
+			Torchoo
+		</a>
+		<div class="user is-active">
+			<div class="user__link">
+				<span class="user__dash">&#8212;</span><a href="#"><span class="user__name">Genn Osipenko</span><i class="user__arrow"></i></a>
+			</div>
+			<div class="user__drop">
+				<a href='#' class="user__profile"><i></i>Profile</a>
+				<a href='#' class="user__logout">Log out</a>
+			</div>
+		</div>
+		<ul class="gnav">
+			<li class="gnav__balances"><a class="is-active" href="#"><i></i>Balances <span>3</span></a></li>
+			<li class="gnav__transactions"><a href="#"><i></i>Transactions <span>2</span></a></li>
+		</ul>
+		<div class="search" contentEditable="true">
+			<div class="search__keyword">#pizza</div> fun
+		</div>
+	</div>
+	<!-- end header -->
+
+
+	<!-- begin side -->
+	<aside class="sidebar">
+		<!-- begin addrecord -->
+		<div class="add">
+			<h3>Add a record:</h3>
+			<div class="field field_amount">
+				<input type="text" name="" placeholder="enter the amount" id="">
+				<ul class="currency">
+					<li><a href="#">$</a></li>
+					<li><a href="#">₴</a></li>
+					<li><a class="is-active" href="#">£</a></li>
+					<li><a href="#">€</a></li>
+					<li class="currency__moar"><i></i></li>
+				</ul>
+			</div>
+			<h3>E-mails of your friends: <label class="add__even"><input type="checkbox" name="" id=""><i></i>even</label></h3>
+			<div class="add__friends">
+				<div class="field field_friend">
+					<label class="field__label">friend1@gmail.com</label>
+					<input type="text" name="" placeholder="30$" id="">
+				</div>
+				<div class="field field_friend">
+					<label class="field__label">friend1@gmail.com</label>
+					<input type="text" name="" placeholder="30$" id="">
+				</div>
+				<a href='#' class="add__addfriend"><i></i>Add more friends</a>
+			</div>
+
+
+			<h3>Money owed for</h3>
+			<div class="field">
+				<input type="text" name="" value="pizza and doughnuts" id="">
+			</div>
+			<h3>Location (optional):</h3>
+			<div class="field field_location">
+				<i></i>
+				<input type="text" name="" value="15th district, Kyoto, Japan" id="">
+			</div>
+
+			<div class="add__take">+ I take money</div>
+			<div class="add__give">- I give money</div>
+		</div>
+		<!-- end addrecord -->
+	</aside>
+	<!-- end side -->
+
+	<!-- begin main -->
+	<div class="main">
+		<div class="balances">
+			<div class="message">You have <a href='#'>2 transactions</a> to review</div>
+			<!-- begin balance -->
+			<div class="balance"><div class="balance__content">
+				<div class="balance__value is-plus">+2<span>$</span></div>
+				<div class="balance__avatar"><img src="http://placedog.com/68/68" alt=""></div>
+				<div class="balance__user">Akella</div>
+				<a href='#' class="balance__records">7 records</a>
+				
+			</div></div>
+			<!-- end balance -->
+	
+			<!-- begin balance -->
+			<div class="balance is-active"><div class="balance__content">
+				<div class="balance__value is-minus">-20<span>$</span></div>
+				<div class="balance__avatar"><img src="http://placedog.com/68/68" alt=""></div>
+				<div class="balance__user">Akella</div>
+				<a href='#' class="balance__records">7 records</a> – <strong>2 not confirmed</strong>
+				<div class="balance__geteven">Get even</div>
+			</div>
+
+			<!-- begin smalltransaction  -->
+			<div class="smalltransaction is-waiting">
+				<time>15/05/2013<br>13:52</time>
+				<div class="smalltransaction__message">
+				<div class="smalltransaction__decline button button_yellow"><i></i>Undo decline</div>
+				Just a gift of adore and admiration</div>
+				<div class="smalltransaction__value">+120 £</div>
+				<div class="smalltransaction__action">
+					<div class="button button_green">pay</div>
+				</div>
+			</div>
+			<!-- end smalltransaction -->
+			<!-- begin smalltransaction  -->
+			<div class="smalltransaction">
+				<time>15/05/2013<br>13:52</time>
+				<div class="smalltransaction__message">adore and admiration</div>
+				<div class="smalltransaction__value is-minus">+10 £</div>
+				<div class="smalltransaction__action">
+					
+				</div>
+			</div>
+			<!-- end smalltransaction -->
+			<!-- begin smalltransaction  -->
+			<div class="smalltransaction">
+				<time>15/05/2013<br>13:52</time>
+				<div class="smalltransaction__message">adore and admiration</div>
+				<div class="smalltransaction__value is-plus">+10 £</div>
+				<div class="smalltransaction__action">
+					
+				</div>
+			</div>
+			<!-- end smalltransaction -->
+			</div>
+			<!-- end balance -->
+			<!-- begin balance -->
+			<div class="balance"><div class="balance__content">
+				<div class="balance__value is-minus">-200<span>$</span></div>
+				<div class="balance__avatar"><img src="http://placedog.com/68/68" alt=""></div>
+				<div class="balance__user">Akella</div>
+				<a href='#' class="balance__records">7 records</a>
+				
+			</div></div>
+			<!-- end balance -->
+			<div class="balances__total">
+				<h3>Total</h3>
+				<div class="balances__totalvalue is-plus">+1 000<span>£</span></div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+
+</div>
+</body>
+</html>
