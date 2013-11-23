@@ -6,8 +6,17 @@
 	color: #222 
 	height: 30px 
 	line-height: 30px
+	&.is-unread
+		+bold
+	&.message_search
+		background: transparent 
+		strong
+			+bold
 	a
-		color: #222 
+		color: #222
+		
+		
+		
 .is-plus
 	color: #40B34F 
 .is-minus
@@ -47,6 +56,7 @@
 	&:hover
 		//background: #f4f4f4 
 	&.is-active
+		border-bottom: 1px solid #C2C2C2 
 		.balance__content
 			background: #3FB34F 
 			color: #fff

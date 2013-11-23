@@ -66,6 +66,9 @@ a { color: #222222; }
 .button.button_decline i { background: url('../img/icons-s2709886dba.png') 0 -244px no-repeat; width: 15px; height: 16px; top: 3px; }
 
 .message { background: #fff2d0; border-bottom: 1px solid #fed567; padding: 0 10px; font-size: 16px; color: #222222; height: 30px; line-height: 30px; }
+.message.is-unread { font-family: "Roboto", sans-serif; font-weight: 700; }
+.message.message_search { background: transparent; }
+.message.message_search strong { font-family: "Roboto", sans-serif; font-weight: 700; }
 .message a { color: #222222; }
 
 .is-plus { color: #40b34f; }
@@ -80,6 +83,7 @@ a { color: #222222; }
 
 .balance { border-bottom: 1px solid #ededed; position: relative; cursor: pointer; }
 .balance .balance__content { padding: 10px; position: relative; z-index: 20; }
+.balance.is-active { border-bottom: 1px solid #c2c2c2; }
 .balance.is-active .balance__content { background: #3fb34f; color: white; margin-bottom: 2px; }
 .balance.is-active .balance__content:before { position: absolute; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; padding-left: 10px; padding-right: 10px; background: url(../img/pattern1.png) repeat-x 0 0; content: " "; z-index: 100; }
 .balance.is-active .balance__user, .balance.is-active .balance__records, .balance.is-active .balance__value { color: white; }
